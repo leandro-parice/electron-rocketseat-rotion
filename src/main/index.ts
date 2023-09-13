@@ -5,6 +5,8 @@ import path from 'node:path'
 import icon from '../../resources/icon.png?asset'
 import { createFileRoute, createURLRoute } from 'electron-router-dom'
 
+import './ipc'
+
 function createWindow(): void {
   const mainWindow = new BrowserWindow({
     width: 1120,
