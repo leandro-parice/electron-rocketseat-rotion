@@ -24,7 +24,7 @@ ipcMain.handle(
 ipcMain.handle(
   IPC.DOCUMENTS.FETCH,
   async (_, { id }: FetchDocumentRequest): Promise<FetchDocumentResponse> => {
-    const document = store.get(`documents.$id`) as Document
+    const document = store.get(`documents.${id}`) as Document
     return { data: document }
   },
 )

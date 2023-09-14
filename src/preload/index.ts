@@ -23,6 +23,7 @@ const api = {
   },
 
   fetchDocument(req: FetchDocumentRequest): Promise<FetchDocumentResponse> {
+    console.log(req)
     return ipcRenderer.invoke(IPC.DOCUMENTS.FETCH, req)
   },
 
